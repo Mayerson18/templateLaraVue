@@ -1,46 +1,32 @@
-<template>
-    <div>
-        <div class="form-group">
-            <router-link to="/" class="btn btn-default">Back</router-link>
-        </div>
+<template lang="pug">
+    div
+        .form-group
+            router-link.btn.btn-default(to="/") Back
 
-        <div class="panel panel-default">
-            <div class="panel-heading">Edit company</div>
-            <div class="panel-body">
-                <form v-on:submit="saveForm()">
-                    <div class="row">
-                        <div class="col-xs-12 form-group">
-                            <label class="control-label">Company name</label>
-                            <input type="text" v-model="company.name" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 form-group">
-                            <label class="control-label">Company address</label>
-                            <input type="text" v-model="company.address" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 form-group">
-                            <label class="control-label">Company website</label>
-                            <input type="text" v-model="company.website" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 form-group">
-                            <label class="control-label">Company email</label>
-                            <input type="text" v-model="company.email" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 form-group">
-                            <button class="btn btn-success">Update</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+        .panel.panel-default
+            .panel-heading Edit Company
+            .panel-body
+                form(v-on:submit="saveForm()")
+                    .row
+                        .col-xs-12.form-group
+                            label.control-label Company name
+                            input.form-control(v-model="company.name")
+                    .row
+                        .col-xs-12.form-group
+                            label.control-label Company address
+                            input.form-control(v-model="company.address")
+                    .row
+                        .col-xs-12.form-group
+                            label.control-label Company website
+                            input.form-control(v-model="company.website")
+                    .row
+                        .col-xs-12.form-group
+                            label.control-label Company email
+                            input.form-control(v-model="company.email")
+                    .row
+                        .col-xs-12.form-group
+                            button.btn.btn-success Update
+
 </template>
 
 <script>
@@ -84,3 +70,9 @@
         }
     }
 </script>
+
+<style lang="scss" scoped>
+    form {
+        
+    }
+</style>
